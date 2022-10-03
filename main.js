@@ -86,7 +86,7 @@ console.log('vowels')
 let newString = ''
 function vowels(str){
     for(i=0; i<str.length; i++){
-        if (str[i]=== 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u'){
+        if (str[i].toLowerCase()=== 'a' || str[i].toLowerCase() === 'e' || str[i].toLowerCase() === 'i' || str[i].toLowerCase() === 'o' || str[i].toLowerCase() === 'u'){
             newString += str[i]
         }
     } return newString
@@ -144,11 +144,7 @@ function camelCase(str){
     }return str2
 }console.log(camelCase('well yeah of course'))
 //--------------------------------------------------
-// crazyCase2ReturnOfCrazyCase` - same as `crazyCase`, but does NOT count
-//  spaces as letters to upper or lower case (see examples below!)
-//   * Examples:
-//     * crazyCase2ReturnOfCrazyCase('multiple words here') -> 'mUlTiPlE wOrDs HeRe'
-//     * crazyCase2ReturnOfCrazyCase('crazy stuff') -> 'cRaZy StUfF'
+
 console.log('\n')
 console.log('crazyCase2')
 function crazyCase2(str){
