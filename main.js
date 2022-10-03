@@ -91,3 +91,76 @@ function vowels(str){
         }
     } return newString
 }console.log(vowels('hello goodmorning'))
+
+//----------------------------------------
+
+console.log('\n')
+console.log('stretch goals!!!')
+//--------------------------------------
+console.log('\n')
+console.log('crazyCase')
+
+function crazyCase(str){
+    let str2 = '';
+        for (i=0; i<str.length; i++){
+            if(i % 2 === 0){
+                str2 += str[i].toLowerCase()
+            } else if (i % 2 !== 0){
+                str2 += str[i].toUpperCase()
+            }
+            
+        }return str2
+
+}console.log(crazyCase('hello goodmorning'))
+//---------------------------------------
+console.log('\n')
+console.log('titleCase')
+
+function titleCase(str){
+    let str2 = ''
+    for (i=0; i<str.length; i++){
+        if(str[i] === ' '){
+            str2 += str[i];
+            str2 += str[i+=1].toUpperCase();
+        } else if (i === 0){
+            str2 += str[i].toUpperCase();
+        }else{
+            str2 += str[i]
+        }
+
+    }return str2
+}console.log(titleCase('welcome to code immersives'))
+//-------------------------------------------
+console.log('\n')
+console.log('camelCase')
+function camelCase(str){
+    let str2 = ''
+    for (i=0; i<str.length; i++){
+        if(str[i] === ' '){
+            str2 += str[i+=1].toUpperCase()
+        }else {
+            str2 += str[i]
+        }
+    }return str2
+}console.log(camelCase('well yeah of course'))
+//--------------------------------------------------
+// crazyCase2ReturnOfCrazyCase` - same as `crazyCase`, but does NOT count
+//  spaces as letters to upper or lower case (see examples below!)
+//   * Examples:
+//     * crazyCase2ReturnOfCrazyCase('multiple words here') -> 'mUlTiPlE wOrDs HeRe'
+//     * crazyCase2ReturnOfCrazyCase('crazy stuff') -> 'cRaZy StUfF'
+console.log('\n')
+console.log('crazyCase2')
+function crazyCase2(str){
+    let str2 = ''
+    let cnt = 0
+    for (i=0; i<str.length; i++){
+        if(str[i] === ' '){
+            cnt += 1
+        }if (cnt % 2 === 0){
+            str2 += str[i].toUpperCase();
+        }if (cnt % 2 !== 0){
+            str2 += str[i].toLowerCase()
+        } cnt += 1
+        }return str2
+}console.log(crazyCase2('multiple words here'))
